@@ -67,7 +67,7 @@ Get started in just a few steps! ⏩
 2. **Set up a virtual environment**:
 
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -110,7 +110,7 @@ fastapi-base/
 │   └── main.py            # 🚀 Entry point of the app
 ├── docs/                  # 📝 Documentation files
 ├── tests/                 # 🧪 Test files
-├── env/                   # ⚙️ Environment setup for tests
+├── env                    # ⚙️ Environment setup for tests
 ├── env.example            # 📄 Example environment file
 ├── docker-compose.yml     # 🐳 Docker Compose configuration
 ├── Dockerfile             # 🐳 Dockerfile for building the app
