@@ -80,10 +80,10 @@ Get started in just a few steps! ⏩
 4. **Run the app**:
 
    ```bash
-   uvicorn src.main:app --reload
+   uvicorn src.main:app --port 3000 --reload
    ```
 
-5. Open your browser at `http://127.0.0.1:8000` and enjoy! 🌐
+5. Open your browser at `http://127.0.0.1:3000` and enjoy! 🌐
 
 ---
 
