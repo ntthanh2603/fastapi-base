@@ -110,8 +110,8 @@ fastapi-base/
 │   └── main.py            # 🚀 Entry point of the app
 ├── docs/                  # 📝 Documentation files
 ├── tests/                 # 🧪 Test files
-│   ├── env/               # ⚙️ Environment setup for tests
-│   └── env.example        # 📄 Example environment file
+├── env/                   # ⚙️ Environment setup for tests
+├── env.example            # 📄 Example environment file
 ├── docker-compose.yml     # 🐳 Docker Compose configuration
 ├── Dockerfile             # 🐳 Dockerfile for building the app
 ├── requirements.txt       # 📋 Dependencies
