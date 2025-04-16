@@ -1,11 +1,13 @@
 import jwt
-from fastapi import Request, HTTPException, status
-from fastapi.responses import JSONResponse
-import os
-from schemas.user import IUser
+from fastapi import  HTTPException, status
+from src.schemas.user import IUser
+from src.core.settings import settings
+
 
 
 class AuthService:
+    def __init__(self):
+        pass
     # Decode token
     def decode_token(self, token: str) -> IUser:
         try:
@@ -22,10 +24,8 @@ class AuthService:
     # Verify token
     async def verify_token(self, token: str) -> IUser:
         try:
-            payload = self.decode_token(token)
-
             result = jwt.decode(
-                token, secret_key, algorithms=[os.getenv("JWT_ALGORITHM")]
+                token, settings.JWT_SECRET_KEY, algorithms=settings.JWT_ALGORITHM
             )
 
             return result

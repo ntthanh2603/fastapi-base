@@ -12,3 +12,4 @@ load_dotenv
 asyncpg
 black
 python-dotenv
+bcrypt
