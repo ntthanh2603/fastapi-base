@@ -5,9 +5,8 @@ import os
 import uvicorn
 import asyncio
 from src.middlewares.auth import AuthMiddleware
-from dotenv import load_dotenv
+from src.core.settings import settings
 
-load_dotenv()
 
 
 def get_application() -> FastAPI:
@@ -16,7 +15,7 @@ def get_application() -> FastAPI:
         title="Social network SNet",
         docs_url="/docs",
         redoc_url="/re-docs",
-        openapi_url=f"{os.getenv('API_PREFIX', '')}/openapi.json",
+        openapi_url=f"{settings.API_PREFIX}/openapi.json",
         description="""
         API use FastAPI docs for Social network SNet:
         - Posts.
@@ -35,7 +34,7 @@ def get_application() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    application.include_router(router, prefix=os.getenv("API_PREFIX", ""))
+    application.include_router(router, prefix=settings.API_PREFIX)
     return application
 
 
@@ -46,8 +45,8 @@ def main():
 
     config = uvicorn.Config(
         app=app,
-        host=os.getenv("HOST"),
-        port=int(os.getenv("PORT")),
+        host=settings.HOST,
+        port=int(settings.PORT_FASTAPI),
         reload=True,
     )
 
