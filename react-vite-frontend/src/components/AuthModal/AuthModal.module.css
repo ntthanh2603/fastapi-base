@@ -1,0 +1,49 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  min-width: 300px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #888;
+}
+.modalCloseButton:hover {
+    color: #333;
+}
+
+
+.modalErrorMessage { /* Style cho lỗi hiển thị ở cấp Modal */
+  background-color: #ffe3e3;
+  color: #d90000;
+  border: 1px solid #ffb3b3;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}

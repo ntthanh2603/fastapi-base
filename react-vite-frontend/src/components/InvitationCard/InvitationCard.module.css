@@ -1,0 +1,441 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  max-width: 600px; /* Giới hạn chiều rộng tối đa của card */
+  margin-left: auto; /* Căn giữa card nếu pageContainer rộng hơn */
+  margin-right: auto;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.hostInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.hostName {
+  font-weight: 600;
+  color: #050505;
+}
+
+.invitationTime {
+  font-size: 0.8rem;
+  color: #65676b;
+}
+
+.cardContent {
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #050505;
+  margin-bottom: 8px;
+}
+
+.cardContent p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.cardStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #65676b;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e4e6eb;
+}
+.commentToggle {
+    cursor: pointer;
+}
+.commentToggle:hover {
+    text-decoration: underline;
+}
+
+
+.cardActions {
+  display: flex;
+  justify-content: space-around; /* Hoặc space-between */
+  border-top: 1px solid #e4e6eb; /* Thêm viền nếu không có cardStats */
+  padding-top: 8px;
+}
+
+.actionButton {
+  background-color: transparent;
+  border: none;
+  color: #606770;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-grow: 1; /* Cho các nút chiếm không gian đều nhau */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.actionButton:hover {
+  background-color: #f0f2f5;
+}
+
+.actionButton:disabled {
+    color: #bcc0c4;
+    cursor: not-allowed;
+}
+.actionButton:disabled:hover {
+    background-color: transparent;
+}
+
+
+.actionButton.liked {
+  color: #007bff; /* Màu xanh khi đã like */
+}
+
+/* Comments Section */
+.commentsSection {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e4e6eb;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.commentAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+.commentBody {
+  background-color: #f0f2f5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  flex-grow: 1;
+}
+
+.commentUser {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #050505;
+  display: block; /* Để nó không inline với text */
+  margin-bottom: 2px;
+}
+
+.commentText {
+  font-size: 0.9rem;
+  color: #050505;
+  margin: 0;
+  word-wrap: break-word; /* Để text dài tự xuống dòng */
+}
+
+.noComments {
+    font-size: 0.9rem;
+    color: #65676b;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.commentInput {
+  flex-grow: 1;
+  border: 1px solid #ccd0d5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  margin-right: 8px;
+  background-color: #f0f2f5;
+}
+.commentInput:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.commentSubmitButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.commentSubmitButton:disabled {
+  background-color: #a0cfff;
+  cursor: not-allowed;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow nhẹ hơn */
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  max-width: 580px; /* Hoặc 600px tùy ý */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Giảm margin */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid #f0f2f5; /* Viền nhẹ cho avatar */
+}
+
+.hostInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.hostName {
+  font-weight: 600;
+  color: #050505;
+  font-size: 0.95rem;
+}
+
+.postTime { /* Style cho thời gian đăng bài */
+  font-size: 0.8rem;
+  color: #65676b;
+}
+
+.cardContent {
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.95rem; /* Tăng nhẹ */
+  line-height: 1.45;
+  color: #1c1e21; /* Màu chữ Facebook hay dùng */
+  margin-bottom: 12px; /* Tăng khoảng cách */
+  white-space: pre-line; /* Giữ các xuống dòng trong description */
+}
+
+.venueImage { /* Style cho hình ảnh quán */
+  width: 100%;
+  max-height: 350px; /* Giới hạn chiều cao tối đa */
+  object-fit: cover; /* Đảm bảo ảnh fill không bị méo */
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #e4e6eb;
+}
+
+.eventDetails { /* Style cho các chi tiết sự kiện */
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+.eventDetails strong {
+    color: #1c1e21;
+}
+
+.cardStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem; /* Giảm nhẹ */
+  color: #65676b;
+  padding: 8px 0; /* Chỉ padding top/bottom */
+  margin-bottom: 0; /* Bỏ margin bottom */
+  /* border-bottom: 1px solid #e4e6eb; */ /* Bỏ border bottom ở đây, để actions có border top */
+}
+.commentToggle {
+    cursor: pointer;
+    padding: 4px; /* Thêm padding để dễ click */
+}
+.commentToggle:hover {
+    text-decoration: underline;
+    background-color: #f0f2f5;
+    border-radius: 3px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #e4e6eb; /* Border top cho actions */
+  padding-top: 6px; /* Giảm padding top */
+  padding-bottom: 2px; /* Thêm padding bottom nhẹ */
+}
+
+.actionButton {
+  background-color: transparent;
+  border: none;
+  color: #606770;
+  font-weight: 600;
+  padding: 10px 12px; /* Tăng padding */
+  border-radius: 6px; /* Bo tròn hơn */
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex; /* Để căn giữa icon và text nếu có */
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* Khoảng cách giữa icon và text */
+}
+
+.actionButton:hover {
+  background-color: #f0f2f5;
+}
+
+.actionButton:disabled {
+    color: #bcc0c4;
+    cursor: not-allowed;
+}
+.actionButton:disabled:hover {
+    background-color: transparent;
+}
+
+.actionButton.liked {
+  color: #0866ff; /* Màu xanh dương mới của Facebook */
+  /* font-weight: bold; */
+}
+
+
+/* Comments Section */
+.commentsSection {
+  margin-top: 10px; /* Giảm margin top */
+  padding-top: 10px;
+  border-top: 1px solid #e4e6eb;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 8px; /* Giảm margin */
+}
+
+.commentAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  flex-shrink: 0; /* Không cho avatar co lại */
+}
+
+.commentBody {
+  background-color: #f0f2f5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  flex-grow: 1;
+  font-size: 0.9rem; /* Đồng bộ font size */
+}
+
+.commentUser {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #050505;
+  display: block;
+  margin-bottom: 1px; /* Giảm margin */
+}
+
+.commentText {
+  color: #050505;
+  margin: 0 0 2px 0; /* Thêm margin bottom nhẹ */
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.commentTime { /* Style cho thời gian comment */
+    font-size: 0.75rem;
+    color: #65676b;
+    display: block;
+    margin-top: 2px;
+}
+
+.noComments {
+    font-size: 0.9rem;
+    color: #65676b;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.viewMoreComments {
+    font-size: 0.85rem;
+    color: #007bff;
+    cursor: pointer;
+    text-align: left; /* Hoặc center */
+    margin-top: 5px;
+    padding: 5px;
+}
+.viewMoreComments:hover {
+    text-decoration: underline;
+}
+
+
+.commentForm {
+  display: flex;
+  align-items: center; /* Căn giữa input và avatar */
+  margin-top: 10px;
+}
+
+.commentInput {
+  flex-grow: 1;
+  border: none; /* Bỏ border */
+  border-radius: 20px; /* Bo tròn hơn */
+  padding: 10px 15px; /* Tăng padding */
+  font-size: 0.9rem;
+  margin-left: 8px; /* Thêm margin left nếu avatar form nằm bên trái */
+  background-color: #f0f2f5;
+  outline: none; /* Bỏ outline khi focus */
+}
+/* Nếu avatar form nằm bên phải input thì không cần margin-left */
+/* .commentForm .commentAvatar { margin-left: 8px; margin-right: 0; } */
+
+
+.commentSubmitButton {
+  background-color: transparent; /* Trong suốt */
+  color: #0866ff; /* Màu xanh */
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px; /* Điều chỉnh padding */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: 8px; /* Khoảng cách với input */
+}
+.commentSubmitButton:hover:not(:disabled) {
+    background-color: #e7f3ff;
+}
+
+.commentSubmitButton:disabled {
+  color: #bcc0c4; /* Màu xám khi disable */
+  cursor: not-allowed;
+}

@@ -1,0 +1,149 @@
+/* Giữ lại các style .pageContainer, .header, .authActions, .actionButton từ trước */
+/* và cập nhật/thêm mới như sau */
+
+.pageContainer {
+  background-color: #f0f2f5; /* Màu nền giống Facebook */
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #ffffff; /* Header màu trắng */
+  color: #050505; /* Chữ màu đen */
+  padding: 0 20px; /* Giảm padding */
+  height: 56px; /* Chiều cao cố định cho header */
+  border-bottom: 1px solid #dddfe2;
+  position: sticky; /* Giữ header khi cuộn */
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #007bff; /* Màu logo chính */
+  margin: 0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userInfo span {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.actionButton { /* Style chung cho các nút trên header */
+  background-color: #e7f3ff; /* Màu nền nhạt */
+  color: #007bff; /* Màu chữ chính */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.actionButton:hover {
+  background-color: #d0e7ff;
+}
+
+.actionButton.registerButton { /* Riêng cho nút đăng ký */
+  background-color: #42b72a;
+  color: white;
+}
+.actionButton.registerButton:hover {
+  background-color: #36a420;
+}
+
+.actionButton.logoutButton {
+    background-color: #f0f2f5;
+    color: #050505;
+}
+.actionButton.logoutButton:hover {
+    background-color: #e4e6eb;
+}
+
+
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.authSeparator {
+  color: #bec3c9;
+  font-size: 1.1em;
+}
+
+.createPostPlaceholder {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+    margin: 16px auto; /* Căn giữa và cách header */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+.createPostPlaceholder input {
+    flex-grow: 1;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.createPostPlaceholder input:hover {
+    background-color: #e4e6eb;
+}
+
+
+.feedContainer {
+  padding: 16px 0; /* Chỉ padding top/bottom, không padding left/right */
+  max-width: 600px; /* Giới hạn chiều rộng của feed */
+  margin: 0 auto; /* Căn giữa feed */
+}
+
+.emptyFeed {
+  text-align: center;
+  color: #65676b;
+  margin-top: 40px;
+  font-size: 1.1rem;
+}
+
+/* Không cần .invitationList nữa vì InvitationCard tự có margin-bottom */
+/* Không cần .footer nếu bạn muốn giao diện feed liên tục */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 10px; /* Giảm padding cho màn hình nhỏ */
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .userInfo span {
+    display: none; /* Ẩn tên trên mobile để tiết kiệm không gian */
+  }
+   .createPostPlaceholder, .feedContainer {
+    max-width: 100%; /* Cho phép chiếm toàn bộ chiều rộng trên mobile */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  /* InvitationCard sẽ tự co dãn trong .feedContainer */
+}

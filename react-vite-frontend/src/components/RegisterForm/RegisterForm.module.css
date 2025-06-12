@@ -1,0 +1,172 @@
+/*
+  Nhiều class ở đây có thể giống hệt LoginForm.module.css
+  Bạn có thể sử dụng @import từ LoginForm.module.css hoặc
+  tạo một file CSS Module chung cho form styles nếu muốn.
+  Để đơn giản, chúng ta copy/paste và Vite sẽ xử lý scope.
+*/
+.authForm { }
+
+.authForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formGroup input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #218838;
+}
+
+.authForm p {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1em;
+}
+
+.linkButton:hover {
+  color: #0056b3;
+}
+
+/* src/components/RegisterForm/RegisterForm.module.css */
+/* ... (các style cũ) ... */
+
+.authForm h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Hoặc 25px */
+  color: #1c1e21;
+  font-size: 1.5rem; /* Tăng kích thước tiêu đề */
+}
+
+.errorMessage {
+  background-color: #ffebe8; /* Màu nền lỗi nhẹ nhàng */
+  color: #c92a2a; /* Màu chữ lỗi đậm */
+  border: 1px solid #ffbdad; /* Viền lỗi */
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: left; /* Căn trái nội dung lỗi */
+}
+
+.formGroup {
+  margin-bottom: 18px; /* Tăng khoảng cách giữa các group */
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px; /* Tăng khoảng cách label và input */
+  font-weight: 500; /* Giảm độ đậm */
+  color: #495057; /* Màu chữ label xám hơn */
+  font-size: 0.9rem;
+}
+
+.formGroup input {
+  width: calc(100% - 24px); /* Điều chỉnh width cho padding */
+  padding: 12px; /* Tăng padding input */
+  border: 1px solid #ced4da; /* Màu viền input chuẩn */
+  border-radius: 6px; /* Bo tròn hơn */
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.formGroup input:focus {
+  border-color: #86b7fe; /* Màu viền khi focus */
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Shadow khi focus */
+}
+.formGroup input::placeholder {
+    color: #adb5bd; /* Màu placeholder */
+}
+
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #0866ff; /* Màu xanh dương Facebook */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem; /* Tăng font size nút */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #0052cc; /* Màu hover đậm hơn */
+}
+.submitButton:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+}
+
+
+.switchToLogin { /* Đổi tên class cho rõ nghĩa hơn */
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: #0866ff;
+  cursor: pointer;
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.linkButton:hover {
+  text-decoration: underline; /* Thêm gạch chân khi hover */
+}
+.loadingScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #555;
+}
